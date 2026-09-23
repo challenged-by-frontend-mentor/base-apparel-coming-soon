@@ -1,7 +1,7 @@
 import "./App.css";
 import Logo from "./assets/logo.svg";
-import CoverMobile from "./assets/hero-mobile.jpg"
-import CoverDesktop from "./assets/hero-desktop.jpg"
+import CoverMobile from "./assets/hero-mobile.jpg";
+import CoverDesktop from "./assets/hero-desktop.jpg";
 import Hero from "./components/Hero";
 import EmailInput from "./components/EmailInput";
 import Footer from "./components/Footer";
@@ -9,17 +9,21 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <main className="main-content">
+      <img
+        src={Logo}
+        alt="Base Apparel logo"
+        className="page-content__logo"
+      />
+      <picture className="page-content__cover">
+        <source srcSet={CoverDesktop} media="(min-width: 1024px)" />
         <img
-          src={Logo}
-          alt="Base Apparel logo"
-          className="main-content__logo"
-          aria-label="Base Apperal logo"
+          src={CoverMobile}
+          alt=""
+          aria-hidden="true"
+          className="page-content__cover-image"
         />
-        <picture className="main-content__cover">
-          <source srcSet={CoverDesktop} media="(min-width: 1024px)" />
-          <img src={CoverMobile} alt="" aria-hidden="true" className="main-content__mobile-cover" />
-        </picture>
+      </picture>
+      <main className="main-content">
         <Hero />
         <EmailInput />
       </main>

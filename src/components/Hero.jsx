@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <h1 className="hero__title">
-        We're <i className="hero__title--emphasize">coming soon</i>
+        We're <em className="hero__title--emphasize">coming soon</em>
       </h1>
       <p className="hero__description">
         Hello fellow shoppers! We're currently building our new fashion store.
